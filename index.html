@@ -1,29 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Laboratorio 2 - Semana 5</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laboratorio 2 Progra 4</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1 id="titulo">Laboratorio JavaScript</h1>
-    <button id="btnColor">Cambiar color</button>
-    
-    <input type="text" id="nombre" placeholder="Escribe tu nombre">
-    <button id="btnSaludo">Saludar</button>
-    <p id="saludo"></p>
-    <button class="btnAgregar">Agregar elemento</button>
 
-    <ul id="lista"></ul>
+<main class="app">
+  <header class="top">
+    <div>
+      <center><h1 id="titulo">Laboratorio 2</h1> </center>
+    </div>
 
-    <button id="btnEliminar">Eliminar último</button>
+    <div class="tema">
+      <label for="selTema">Tema</label>
+      <select id="selTema">
+        <option value="claro" selected>Claro</option>
+        <option value="oscuro">Oscuro</option>
+      </select>
+    </div>
+  </header>
 
-    <div class="cuadro">Cuadro 1</div>
-    <div class="cuadro">Cuadro 2</div>
-    <div class="cuadro">Cuadro 3</div>
+  <section class="grid">
 
-    <button id="btnContar">Contar cuadros</button>
-    <p id="resultado"></p>
+    <section class="card">
+      <h2>1) Tema</h2>
+      <p class="muted">Cambia el fondo y cambia la imagen.</p>
+      <img id="imgTema" class="img" src="img/narut.jpg" alt="imagen"/>
+    </section>
+
+    <section class="card">
+      <div class="head">
+        <h2>2) Mostrar/Ocultar</h2>
+        <button id="btnToggle" class="btn btn-ghost" type="button">Ver/Ocultar</button>
+      </div>
+      <div id="panel" class="panel">
+        <p>Este bloque se oculta o muestra conforme selección</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3) Validación (keyup)</h2>
+      <p class="muted">Nombre mínimo 3 caracteres.</p>
+      <input id="txtValidar" type="text" placeholder="Escribe tu nombre" />
+      <small id="msgValidar" class="hint">Esperando...</small>
+    </section>
+
+    <section class="card">
+      <h2>4) Agregar a lista</h2>
+      <p class="muted">Escribe y agrega un ítem.</p>
+      <div class="row">
+        <input id="txtItem" type="text" placeholder="Ej: Teclado" />
+        <button id="btnAgregar" class="btn btn-primary" type="button">Agregar</button>
+      </div>
+      <ul id="lista" class="lista"></ul>
+    </section>
+
+    <section class="card">
+      <h2>5) Eliminar último elemnto de la lista anterior</h2>
+      <p class="muted">Quita el último ítem de la lista</p>
+      <button id="btnEliminarUltimo" class="btn btn-danger" type="button">Eliminar último</button>
+      <p id="msgEliminar" class="muted" style="margin-top:10px"></p>
+    </section>
+
+<section class="card">
+  <h2>6) Calculadora</h2>
+  <p class="muted">Suma dos números.</p>
+  <div class="row">
+    <input id="num1" type="number" placeholder="Número 1">
+    <input id="num2" type="number" placeholder="Número 2">
+  </div>
+
+  <button id="btnSumar" class="btn btn-primary" type="button">Sumar</button>
+
+  <p id="resultado" style="margin-top:10px;font-weight:bold"></p>
+</section>
+
+    <section class="card">
+      <h2>7) Resaltar lista</h2>
+      <p class="muted">Resalta todos los ítems que existan.</p>
+      <button id="btnResaltar" class="btn" type="button">Resaltar</button>
+      <button id="btnQuitar" class="btn btn-ghost" type="button">Quitar</button>
+      <p id="msgResaltar" class="muted" style="margin-top:10px"></p>
+    </section>
+
+<section class="card">
+  <h2>8) Cambio de color</h2>
+  <p class="muted">Cambia el color del texto dinámicamente</p>
+
+  <select id="selColor">
+    <option value="black">Negro</option>
+    <option value="red">Rojo</option>
+    <option value="blue">Azul</option>
+    <option value="green">Verde</option>
+  </select>
+
+  <p id="textoColor" style="margin-top:15px;font-weight:bold">
+    Este texto cambiará de color.
+  </p>
+</section>
+</main>
 
 <script src="script.js"></script>
 </body>
