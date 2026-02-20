@@ -1,0 +1,18 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+button {
+    margin: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.cuadro {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 5px auto;
+}
